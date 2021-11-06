@@ -11,14 +11,14 @@ RSpec.describe GeocodeService do
       end
 
       expect(data).to be_a(Hash)
-      # expect(data[:info]).to be_a(Hash)
-      # expect(data[:results]).to be_a(Array)
-      # expect(data[:results][0]).to be_a(Hash)
-      # expect(data[:results][0][:locations]).to be_a(Array)
-      # expect(data[:results][0][:locations][0]).to be_a(Hash)
-      # expect(data[:results][0][:locations][0][:latLng]).to be_a(Hash)
-      # expect(data[:results][0][:locations][0][:latLng][:lat]).to be_a(Float)
-      # expect(data[:results][0][:locations][0][:latLng][:lng]).to be_a(Float)
+      expect(data[:info]).to be_a(Hash)
+      expect(data[:results]).to be_a(Array)
+      expect(data[:results][0]).to be_a(Hash)
+      expect(data[:results][0][:locations]).to be_a(Array)
+      expect(data[:results][0][:locations][0]).to be_a(Hash)
+      expect(data[:results][0][:locations][0][:latLng]).to be_a(Hash)
+      expect(data[:results][0][:locations][0][:latLng][:lat]).to be_a(Float)
+      expect(data[:results][0][:locations][0][:latLng][:lng]).to be_a(Float)
     end
   end
 end
