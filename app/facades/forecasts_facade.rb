@@ -1,3 +1,0 @@
-class ForecastsFacade
-  
-end
