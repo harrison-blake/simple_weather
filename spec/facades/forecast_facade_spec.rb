@@ -8,7 +8,7 @@ RSpec.describe ForecastFacade do
         forecast = ''
 
         VCR.use_cassette('forecast') do
-          forecast = ForecastFacade.get_current_weather(location)
+          forecast = ForecastFacade.forecast_from_location(location)
         end
 
         expect(forecast).to be_a(Forecast)

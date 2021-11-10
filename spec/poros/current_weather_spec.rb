@@ -20,7 +20,7 @@ RSpec.describe CurrentWeather do
       expect(current_weather.feels_like).to be_a(Float)
       expect(current_weather.temp).to be_a(Float)
       expect(current_weather.humidity).to be_a(Integer)
-      expect(current_weather.uvi).to be_a(Float)
+      expect(current_weather.uvi).to be_a(Integer || Float)
       expect(current_weather.visibility).to be_a(Integer)
       expect(current_weather.conditions).to be_a(String)
       expect(current_weather.icon).to be_a(String)
@@ -36,7 +36,7 @@ RSpec.describe CurrentWeather do
       end
 
       current_weather = CurrentWeather.new(data)
-      expect(current_weather.time).to eq("05:36 PM")
+      expect(current_weather.time).to eq("01:22 AM")
     end
   end
 end
