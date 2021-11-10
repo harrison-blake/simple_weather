@@ -3,6 +3,7 @@ class CurrentWeather
               :date,
               :sunrise,
               :sunset,
+              :temp,
               :feels_like,
               :temp,
               :humidity,
@@ -20,6 +21,7 @@ class CurrentWeather
     @date = get_local_datetime(dt, offset).strftime("%m/%d/%Y")
     @sunrise = get_local_datetime(sunrise, offset).strftime("%I:%M %p")
     @sunset = get_local_datetime(sunset, offset).strftime("%I:%M %p")
+    @temp = data[:current][:temp]
     @feels_like = data[:current][:feels_like]
     @temp = data[:current][:temp]
     @humidity = data[:current][:humidity]

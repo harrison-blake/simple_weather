@@ -4,6 +4,8 @@ class ForecastFacade
     lat = geocode_data[:results][0][:locations][0][:latLng][:lat]
     lon = geocode_data[:results][0][:locations][0][:latLng][:lng]
 
+
+
     WeatherService.get_forecast([lat, lon])
   end
 

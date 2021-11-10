@@ -8,6 +8,7 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'faraday'
 gem 'figaro'
+gem 'jsonapi-serializer'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
