@@ -7,7 +7,7 @@ RSpec.describe CurrentWeather do
       lat_and_lon = [39.738453, -104.984853]
 
       VCR.use_cassette('one_call_forecast') do
-        data = WeatherService.get_forecast(lat_and_lon)
+        data = WeatherService.get_weather_data(lat_and_lon)
       end
 
       current_weather = CurrentWeather.new(data)
@@ -33,7 +33,7 @@ RSpec.describe CurrentWeather do
         lat_and_lon = [39.2904, -76.6122]
 
       VCR.use_cassette('baltimore_timezone_check') do
-        data = WeatherService.get_forecast(lat_and_lon)
+        data = WeatherService.get_weather_data(lat_and_lon)
       end
 
       current_weather = CurrentWeather.new(data)

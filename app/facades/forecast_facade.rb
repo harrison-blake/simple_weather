@@ -6,7 +6,7 @@ class ForecastFacade
 
 
 
-    WeatherService.get_forecast([lat, lon])
+    WeatherService.get_weather_data([lat, lon])
   end
 
   def self.get_current_weather(weather_data)

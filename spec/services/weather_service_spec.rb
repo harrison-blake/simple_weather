@@ -7,7 +7,7 @@ RSpec.describe WeatherService do
       lat_and_lon = [39.738453, -104.984853]
 
       VCR.use_cassette('one_call_forecast') do
-        data = WeatherService.get_forecast(lat_and_lon)
+        data = WeatherService.get_weather_data(lat_and_lon)
       end
 
       expect(data).to be_a(Hash)

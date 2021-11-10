@@ -7,7 +7,7 @@ RSpec.describe Forecast do
       lat_and_lon = [39.738453, -104.984853]
 
       VCR.use_cassette('weather') do
-        weather_data = WeatherService.get_forecast(lat_and_lon)
+        weather_data = WeatherService.get_weather_data(lat_and_lon)
       end
 
       current_weather = CurrentWeather.new(weather_data)
