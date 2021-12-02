@@ -11,8 +11,9 @@ RSpec.describe Forecast do
       end
 
       current_weather = CurrentWeather.new(weather_data)
+      hourly_weather = ForecastFacade.get_hourly_weather(weather_data)
 
-      forecast = Forecast.new(current_weather)
+      forecast = Forecast.new(current_weather, hourly_weather)
 
       expect(forecast).to be_a(Forecast)
       expect(forecast.current_weather).to be_a(CurrentWeather)

@@ -27,6 +27,12 @@ describe 'Forecasts API' do
       expect(forecast[:data][:attributes][:current_weather]).to have_key(:visibility)
       expect(forecast[:data][:attributes][:current_weather]).to have_key(:conditions)
       expect(forecast[:data][:attributes][:current_weather]).to have_key(:icon)
+
+      expect(forecast[:data][:attributes][:hourly_weather][0]).to have_key(:date)
+      expect(forecast[:data][:attributes][:hourly_weather][0]).to have_key(:time)
+      expect(forecast[:data][:attributes][:hourly_weather][0]).to have_key(:temp)
+      expect(forecast[:data][:attributes][:hourly_weather][0]).to have_key(:icon)
+      expect(forecast[:data][:attributes][:hourly_weather][0]).to have_key(:conditions)
     end
   end
 end

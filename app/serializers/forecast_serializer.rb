@@ -15,4 +15,10 @@ class ForecastSerializer
       icon: object.current_weather.icon
     }
   end
+
+  attribute :hourly_weather do |object|
+    object.hourly_weather.each do |hour|
+      {}
+    end
+  end
 end

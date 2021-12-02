@@ -33,6 +33,6 @@ class CurrentWeather
 
   def get_local_datetime(datetime, offset)
     utc = Time.at(datetime).getgm
-    dt = utc.getlocal(offset)
+    utc.getlocal(offset)
   end
 end
